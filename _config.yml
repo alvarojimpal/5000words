@@ -45,7 +45,7 @@ features                                  :
     fontawesome_icon_name                 : chart-line
 
   - title                                 : Focus on Essential Words
-    description                           : Learn the 5000 most frequent words that make up 95% of daily conversations. Understand half of your target language with just 500 words.
+    description                           : Learn the 5000 most frequent words that make up 78% of daily conversations. Understand half of your target language with just 500 words.
     fontawesome_icon_name                 : bullseye
 
   - title                                 : Spaced Repetition
@@ -54,7 +54,7 @@ features                                  :
 
   - title                                 : 100% Offline Learning
     description                           : Learn anywhere, anytime. No internet connection required for full app functionality.
-    fontawesome_icon_name                 : wifi-slash
+    fontawesome_icon_name                 : plane
   
   - title                                 : Progress Tracking
     description                           : Monitor your journey with clear statistics showing words To Learn, Learning, and Learned.
