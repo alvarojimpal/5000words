@@ -44,8 +44,8 @@ features                                  :
     description                           : Skip what you know. Start learning at exactly the right level for you.
     fontawesome_icon_name                 : chart-line
 
-  - title                                 : Focus on Essential Words
-    description                           : Learn the most useful words. Understand 51% of daily conversations with just 500 words.
+  - title                                 : Focus on Useful Words
+    description                           : Understand 51% of daily conversations with just 500 words.
     fontawesome_icon_name                 : bullseye
 
   - title                                 : Spaced Repetition
