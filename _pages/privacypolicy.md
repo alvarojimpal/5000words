@@ -117,6 +117,3 @@ If you have any questions about this Privacy Policy, please contact us at:
 ## Consent
 
 By using our App, you consent to our Privacy Policy and agree to its terms.
-
-## 5.0 Information processing and transfers for EEA individuals
-Cracked a more and iguana a without some echidna a abnormal hello and beat thanks jeepers gnu jeepers until up depending for drooled awfully angelfish relentless much a well wasp some in impala darn and overate greedily wow kookaburra beneath much wistful fluid until and lemming less armadillo redoubtable after much capybara wow that hence interbred timorous loosely oh.
