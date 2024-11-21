@@ -37,7 +37,7 @@ mastodon_link                             :
 features                                  :
 
   - title                                 : Learn by Speaking
-    description                           : Master vocabulary through voice, not endless card swiping.
+    description                           : Master vocabulary through voice, not endless flashcard swiping.
     fontawesome_icon_name                 : microphone
     
   - title                                 : Smart Level Testing
