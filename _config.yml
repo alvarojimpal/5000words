@@ -54,7 +54,7 @@ features                                  :
 
   - title                                 : 100% Offline Learning
     description                           : No internet? No problem. Learn anywhere, anytime.
-    fontawesome_icon_name                 : cloud-slash
+    fontawesome_icon_name                 : plane
   
   - title                                 : Progress Tracking
     description                           : Watch your vocabulary grow in real-time with clear stats.
@@ -81,7 +81,7 @@ topbar_title_color                        : "#ffffff"
 
 cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
 cover_overlay_color                       : "#363b3d"
-cover_overlay_transparency                : 0.9
+cover_overlay_transparency                : 0.8
 
 device_color                              : black                                     # Set to: blue, black, yellow, coral or white.
 
