@@ -4,7 +4,7 @@ title: Contact me
 include_in_header: true
 ---
 
-# Support Center
+# Contact me
 
 Thank you for using #5000words! I'm here to help you with any questions or issues you might have.
 
