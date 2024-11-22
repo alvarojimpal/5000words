@@ -5,7 +5,7 @@ include_in_header: false
 ---
 
 **Last updated**  
-November 21 2024
+November 21, 2024
 
 # Privacy Policy
 
@@ -109,8 +109,8 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 ## Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
-- Email: [Your Contact Email]
-- Website: [Your Website]
+- Email: 5000wordsapp@gmail.com
+- Website: 5000words.app
 
 <br>
 
