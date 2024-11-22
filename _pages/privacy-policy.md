@@ -109,8 +109,8 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 ## Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
-- Email: 5000wordsapp@gmail.com
-- Website: 5000words.app
+- Email: [5000wordsapp@gmail.com](mailto:5000wordsapp@gmail.com)  
+- Website: [5000words.app](https://5000words.app)  
 
 <br>
 
