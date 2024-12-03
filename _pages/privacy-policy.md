@@ -5,7 +5,7 @@ include_in_header: false
 ---
 
 **Last updated**  
-November 21, 2024
+December 3, 2024
 
 # Privacy Policy
 
@@ -23,7 +23,7 @@ The App stores the following information locally on your device:
 - App preferences and settings
 - User preferences for language learning
 
-This data is stored solely on your device and is necessary for the proper functioning of the App.
+While this data is primarily stored on your device for the App's functionality, some anonymous usage data such as learning progress and feature usage is also collected through Firebase Analytics to help us improve the App experience. This analytics data is anonymized and cannot be tied to individual users. For more details about analytics data collection, see the "Analytics and Diagnostics" section below.
 
 ### Audio Recording
 - The App requires microphone access to record your voice during pronunciation exercises and tests
@@ -35,7 +35,18 @@ This data is stored solely on your device and is necessary for the proper functi
   - Only recorded during lessons or tests
 
 ### Analytics and Diagnostics
-We use Apple's standard analytics and crash reporting tools, which are enabled by default on iOS devices. This helps us improve the App's performance and stability. You can control these settings through your device's Privacy settings.
+We use Firebase Analytics and Crashlytics (without Advertising ID support) to collect anonymous usage data and crash reports. This helps us:
+- Understand how the App is used
+- Identify and fix technical issues
+- Improve App stability and performance
+
+The data collected includes:
+- Basic device information (model, OS version)
+- App performance metrics
+- Feature usage patterns
+- Crash reports
+
+This data is anonymized and does not contain personally identifiable information.
 
 <br>
 
@@ -50,11 +61,17 @@ We use your information solely to:
 
 ## Data Storage and Retention
 
-- All App data is stored locally on your device
-- Data is retained indefinitely until you either:
+### Local Data
+- App data is primarily stored locally on your device
+- Local data is retained indefinitely until you either:
   - Delete the App
   - Use the in-app "Reset Progress" feature
-- No data is stored on external servers
+
+### Analytics Data
+- Anonymous analytics data is stored on Firebase servers
+- This includes usage statistics and crash reports
+- This data helps us improve the App and fix technical issues
+- Analytics data is automatically deleted according to Firebase's data retention policies
 
 <br>
 
@@ -79,16 +96,22 @@ The App requires the following permission:
 
 ## Third-Party Services
 
-The App does not use any third-party services or SDKs. We only utilize Apple's built-in frameworks and services.
+The App uses the following third-party services:
+- Firebase Analytics and Crashlytics
+  - Purpose: App performance monitoring and crash reporting
+  - Data collected: Anonymous usage statistics and crash logs
+  - Privacy Policy: [Google Firebase Privacy Policy](https://firebase.google.com/support/privacy)
 
 <br>
 
 ## Data Security
 
 We implement appropriate security measures by:
-- Processing all data locally on your device
+- Processing all voice data locally on your device; your audio data is never transmitted to external servers
 - Using Apple's secure frameworks
-- Never transmitting your data to external servers
+- Using Google Firebase's secure infrastructure for analytics
+- Implementing industry-standard security practices
+- Never collecting or transmitting personal information
 
 <br>
 
