@@ -1,288 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>#5000words — Learn a language out loud</title>
-  <meta name="description" content="Learn the 5,000 most common words of a language by saying them out loud. On-device speech recognition listens and checks you. 100% offline, 100% private. For iPhone.">
-  <meta name="apple-itunes-app" content="app-id=1234793120">
-  <link rel="icon" href="/assets/app_logo_5000words.jpg">
-  <link rel="apple-touch-icon" href="/assets/app_logo_5000words.jpg">
-  <meta property="og:title" content="#5000words — Learn a language out loud">
-  <meta property="og:description" content="The 5,000 most common words cover most of what you'll ever hear. Learn to say every one — your iPhone listens and checks you, entirely on-device.">
-  <meta property="og:image" content="https://5000words.app/assets/app_logo_5000words.jpg">
-  <meta property="og:url" content="https://5000words.app">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=Fragment+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>#5000words — Speak. Listen. Learn.</title>
+<meta name="description" content="Learn the 5000 most common words in Spanish or English by saying them out loud — flashcards you speak, not swipe. Free iOS app, 100% offline.">
+<link rel="icon" href="assets/app_logo_5000words.jpg">
+<link rel="apple-touch-icon" href="assets/app_logo_5000words.jpg">
+<meta property="og:title" content="#5000words — Speak. Listen. Learn.">
+<meta property="og:description" content="Learn 5000 words by saying them out loud — flashcards you speak, not swipe. Free iOS app, 100% offline.">
+<meta property="og:url" content="https://5000words.app">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://5000words.app/assets/app_logo_5000words.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@5000words_app">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className='js'</script>
+<style>
+:root{
+  --bg:#faf5ee;
+  --ink:#2b2723;
+  --muted:#8a827a;
+  --faint:#b3aca4;
+  --accent:#f04f24;
+  --accent-dark:#d84318;
+  --green:#3fa24f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-dark)}
+img{max-width:100%}
+
+@keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes wave{0%,100%{transform:scaleY(0.45)}50%{transform:scaleY(1.15)}}
+@keyframes grow-y{from{transform:scaleY(0.05)}to{transform:scaleY(1)}}
+@keyframes float-p3{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-12px)}}
+@keyframes float-n3{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-9px)}}
+@keyframes float-n2{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-14px)}}
+
+/* Nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 52px;max-width:1200px;margin:0 auto}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-brand img{width:36px;height:36px;border-radius:10px}
+.nav-brand span{font-weight:700;font-size:18px;color:var(--accent)}
+.nav nav{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:600}
+.nav nav a{color:rgba(43,39,35,0.6)}
+.nav nav a:hover{color:var(--ink)}
+.nav .pill,.nav .pill:hover{color:#fff;background:var(--accent);padding:10px 22px;border-radius:999px}
+.nav .pill:hover{background:var(--accent-dark)}
+
+/* Hero */
+.hero{text-align:center;padding:84px 52px 0;max-width:820px;margin:0 auto}
+.hero h1{margin:0;font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-0.02em;animation:fade-up .7s ease-out both}
+.hero h1 .accent{color:var(--accent)}
+.hero .sub{margin:20px auto 0;font-size:19px;line-height:1.65;color:var(--muted);max-width:560px;text-wrap:pretty;font-weight:500;animation:fade-up .7s ease-out .12s both}
+.hero .store{display:flex;justify-content:center;margin-top:30px;animation:fade-up .7s ease-out .24s both}
+.hero .store img{height:54px;display:block}
+.hero .fine{margin:20px 0 0;font-size:13px;font-weight:500;color:var(--faint);animation:fade-up .7s ease-out .34s both}
+
+/* Flashcard stage */
+.stage{max-width:1000px;margin:72px auto 0;background:linear-gradient(135deg,#f2502c,#ff7c48);border-radius:32px;padding:56px 64px;display:flex;justify-content:center;align-items:center;gap:48px}
+.stage .side{background:#ffffff2b;border-radius:18px;padding:22px 30px;text-align:center;color:#fff;backdrop-filter:blur(2px)}
+.stage .side .kicker{margin:0;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(255,255,255,0.75)}
+.stage .up-next{transform:rotate(3deg);margin-top:40px;animation:float-p3 5.5s ease-in-out infinite}
+.stage .up-next .word{margin:10px 0 0;font-size:30px;font-weight:700}
+.stage .main-card{background:#fff;border-radius:22px;padding:40px 52px;box-shadow:0 24px 60px rgba(120,30,0,0.25);text-align:center;transform:rotate(-3deg);animation:float-n3 6.5s ease-in-out infinite}
+.stage .main-card .kicker{margin:0;font-size:12px;font-weight:600;letter-spacing:0.18em;color:var(--faint)}
+.stage .main-card .word{margin:14px 0 0;font-size:44px;font-weight:700;color:var(--ink)}
+.stage .main-card .listen{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
+.stage .streak{transform:rotate(-2deg);margin-top:-40px;animation:float-n2 5s ease-in-out infinite}
+.stage .streak .count{margin:0;font-size:26px;font-weight:700}
+.stage .streak .label{margin:6px 0 0;font-size:12px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.75)}
+.waveform{display:flex;align-items:center;gap:3px}
+.waveform div{width:4px;background:var(--accent);border-radius:2px;animation:wave 1.5s ease-in-out infinite;transform-origin:center}
+.waveform div:nth-child(2){animation-delay:.1s}
+.waveform div:nth-child(3){animation-delay:.2s}
+.waveform div:nth-child(4){animation-delay:.3s}
+.waveform div:nth-child(5){animation-delay:.4s}
+.waveform div:nth-child(6){animation-delay:.5s}
+.waveform div:nth-child(7){animation-delay:.6s}
+.accepted{font-size:17px;font-weight:700;color:var(--green)}
+
+/* Section shell */
+.section{max-width:1000px;margin:0 auto;padding:104px 52px 96px}
+.section-head{text-align:center;max-width:620px;margin:0 auto 48px}
+.kicker-line{margin:0;font-size:12px;font-weight:600;letter-spacing:0.18em;color:var(--accent)}
+.section h2{margin:14px 0 0;font-size:36px;font-weight:700;letter-spacing:-0.02em;text-wrap:pretty}
+.section .lede{margin:14px auto 0;font-size:16px;line-height:1.65;color:var(--muted);text-wrap:pretty}
+
+/* Frequency curve */
+.chart-card{background:#fff;border-radius:24px;padding:40px 44px 32px;box-shadow:0 24px 60px rgba(120,30,0,0.12)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:220px}
+.bars div{flex:1;border-radius:8px 8px 0 0;transform-origin:bottom;transform:scaleY(0.05)}
+.in-view .bars div{animation:grow-y 1s cubic-bezier(.22,.61,.36,1) both}
+.bars div:nth-child(2){animation-delay:.05s}.bars div:nth-child(3){animation-delay:.1s}.bars div:nth-child(4){animation-delay:.15s}.bars div:nth-child(5){animation-delay:.2s}.bars div:nth-child(6){animation-delay:.25s}.bars div:nth-child(7){animation-delay:.3s}.bars div:nth-child(8){animation-delay:.35s}.bars div:nth-child(9){animation-delay:.4s}.bars div:nth-child(10){animation-delay:.45s}.bars div:nth-child(11){animation-delay:.5s}.bars div:nth-child(12){animation-delay:.55s}.bars div:nth-child(13){animation-delay:.6s}.bars div:nth-child(14){animation-delay:.65s}.bars div:nth-child(15){animation-delay:.7s}.bars div:nth-child(16){animation-delay:.75s}.bars div:nth-child(17){animation-delay:.8s}.bars div:nth-child(18){animation-delay:.85s}.bars div:nth-child(19){animation-delay:.9s}.bars div:nth-child(20){animation-delay:.95s}
+.chart-axis{display:flex;justify-content:space-between;border-top:1px solid rgba(43,39,35,0.1);padding-top:14px;font-size:12px;font-weight:600;color:var(--faint);gap:8px;flex-wrap:wrap}
+.chart-axis .accent{color:var(--accent)}
+.sm-only{display:none}
+
+/* The list */
+.list-section{max-width:1000px;margin:0 auto;padding:0 52px 104px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center}
+.list-section h2{margin:14px 0 0;font-size:36px;font-weight:700;letter-spacing:-0.02em;text-wrap:pretty}
+.list-section .copy p.body{margin:16px 0 0;font-size:16px;line-height:1.65;color:var(--muted);max-width:420px;text-wrap:pretty}
+.chips{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;line-height:20px;background:#fff;border:1px solid rgba(43,39,35,0.1);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600}
+.chip.soon{background:none;border:1px dashed rgba(43,39,35,0.2);color:var(--faint)}
+.list-card{background:#fff;border-radius:24px;padding:30px 34px;box-shadow:0 24px 60px rgba(120,30,0,0.14)}
+.list-card-head{display:flex;justify-content:space-between;align-items:baseline}
+.list-card-head .kicker{margin:0;font-size:12px;font-weight:600;letter-spacing:0.16em;color:var(--faint)}
+.list-card-head .count{margin:0;font-size:12px;font-weight:600;color:var(--muted)}
+.ladder{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.in-view .ladder>div{animation:fade-up .6s ease-out both}
+.ladder>div:nth-child(2){animation-delay:.08s}.ladder>div:nth-child(3){animation-delay:.16s}.ladder>div:nth-child(4){animation-delay:.24s}.ladder>div:nth-child(5){animation-delay:.32s}.ladder>div:nth-child(6){animation-delay:.4s}.ladder>div:nth-child(7){animation-delay:.48s}.ladder>div:nth-child(8){animation-delay:.56s}.ladder>div:nth-child(9){animation-delay:.64s}.ladder>div:nth-child(10){animation-delay:.72s}
+.rung{display:grid;grid-template-columns:52px 76px 1fr;gap:12px;align-items:center}
+.rung .rank{font-size:13px;font-weight:600;color:var(--faint)}
+.rung .word{font-size:17px;font-weight:700;color:var(--ink)}
+.rung .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,#f2502c,#ff7c48)}
+.rung .bar.dim{background:#f0e9e0}
+.rung .done{display:flex;align-items:center;gap:8px}
+.rung .tick{font-size:12px;font-weight:700;color:var(--green)}
+.rung.here{background:#fde4da;margin:0 -14px;padding:10px 14px;border-radius:12px}
+.rung.here .rank,.rung.here .word{color:var(--accent)}
+.rung.here .rank{font-weight:700}
+.rung.here .you{font-size:12px;font-weight:600;color:var(--accent);text-align:right}
+.rung.tail{opacity:0.55}
+.rung.tail .word{color:var(--muted)}
+.ellipsis{text-align:center;font-size:14px;color:#d8d1c8;line-height:0.7}
+
+/* How it works */
+@keyframes pop-in{0%{opacity:0;transform:scale(0.4)}70%{transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes draw-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.steps-section{max-width:1000px;margin:0 auto;padding:0 52px 104px;position:relative}
+.steps-connector{position:absolute;top:24px;left:calc(52px + 16.66%);right:calc(52px + 16.66%);border-top:2px dashed #f0cfc0;transform-origin:left}
+.in-view .steps-connector{animation:draw-x .8s cubic-bezier(.22,.61,.36,1) both}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.in-view .step .num{animation:pop-in .5s cubic-bezier(.34,1.56,.64,1) both}
+.in-view .step h3,.in-view .step p{animation:fade-in .5s ease-out both}
+.in-view .step:nth-child(1) .num{animation-delay:.2s}
+.in-view .step:nth-child(2) .num{animation-delay:.45s}
+.in-view .step:nth-child(3) .num{animation-delay:.7s}
+.in-view .step:nth-child(1) h3,.in-view .step:nth-child(1) p{animation-delay:.3s}
+.in-view .step:nth-child(2) h3,.in-view .step:nth-child(2) p{animation-delay:.55s}
+.in-view .step:nth-child(3) h3,.in-view .step:nth-child(3) p{animation-delay:.8s}
+.step{text-align:center;padding:0 12px}
+.step .num{width:48px;height:48px;background:#fde4da;border:4px solid var(--bg);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;color:var(--accent);margin:-4px auto 0}
+.step h3{margin:16px 0 8px;font-size:18px;font-weight:700}
+.step p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+
+/* CTA */
+.cta{max-width:1000px;margin:0 auto 104px;background:linear-gradient(135deg,#f2502c,#ff7c48);border-radius:32px;padding:64px;text-align:center;color:#fff}
+.cta.in-view{animation:fade-up .7s ease-out both}
+.js .cta:not(.in-view){opacity:0}
+.cta h2{margin:0;font-size:40px;font-weight:700;letter-spacing:-0.02em;text-wrap:pretty}
+.cta p{margin:14px auto 0;font-size:17px;line-height:1.6;color:rgba(255,255,255,0.85);max-width:480px;text-wrap:pretty}
+.cta .store{display:flex;justify-content:center;margin-top:30px}
+.cta .store img{height:56px;display:block}
+
+/* Footer */
+.footer{display:flex;align-items:center;justify-content:space-between;padding:26px 52px;border-top:1px solid rgba(43,39,35,0.08);font-size:13px;color:var(--muted);max-width:1200px;margin:0 auto;gap:16px;flex-wrap:wrap}
+.footer .links{display:flex;gap:24px;flex-wrap:wrap}
+
+/* With JS, reveal targets start hidden until their section scrolls into view,
+   so the scroll trigger never yanks visible content away before animating it. */
+.js [data-reveal]:not(.in-view) .step .num,
+.js [data-reveal]:not(.in-view) .step h3,
+.js [data-reveal]:not(.in-view) .step p,
+.js [data-reveal]:not(.in-view) .ladder>div{opacity:0}
+.js [data-reveal]:not(.in-view) .steps-connector{transform:scaleX(0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,.in-view .bars div,.in-view .ladder>div,.in-view .steps>div{animation:none !important}
+  .bars div{transform:none}
+}
+
+@media (max-width: 920px){
+  .stage{display:block;position:relative;margin:64px 16px 0;padding:24px;border-radius:24px}
+  .stage .main-card{position:relative;z-index:1;width:fit-content;margin:48px auto}
+  .stage .up-next,.stage .streak{position:absolute;margin:0;padding:14px 20px}
+  .stage .up-next{top:20px;left:20px}
+  .stage .up-next .word{font-size:20px}
+  .stage .streak{bottom:20px;right:20px}
+  .stage .streak .count{font-size:20px}
+  .list-section{grid-template-columns:1fr;gap:40px}
+  .steps-connector{display:none}
+  .steps{grid-template-columns:1fr;gap:36px}
+}
+
+@media (max-width: 720px){
+  .nav{padding:16px 24px}
+  .nav nav{gap:18px}
+  .nav nav a:not(.pill){display:none}
+  .hero{padding:56px 24px 0}
+  .hero h1{font-size:42px}
+  .hero .sub{font-size:17px}
+  .stage .main-card{padding:32px 36px}
+  .stage .main-card .word{font-size:36px}
+  .section{padding:72px 24px 64px}
+  .section h2,.list-section h2{font-size:28px}
+  .chart-card{padding:28px 24px 22px}
+  .bars{height:160px}
+  .sm-hide{display:none}
+  .sm-only{display:inline}
+  .chart-axis{flex-wrap:nowrap;white-space:nowrap}
+  .list-section{padding:0 24px 72px}
+  .list-card{padding:24px 22px}
+  .steps-section{padding:0 24px 72px}
+  .cta{margin:0 16px 72px;padding:44px 28px;border-radius:24px}
+  .cta h2{font-size:30px}
+  .footer{padding:22px 24px;justify-content:center;text-align:center}
+}
+</style>
 </head>
 <body>
-  <div class="atmosphere"></div>
 
-  <header class="site">
-    <nav class="nav wrap">
-      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
-      <a class="link" href="#how">How it works</a>
-      <a class="link" href="#privacy">Privacy</a>
-      <a class="link" href="/contact-me/">Support</a>
-      <a class="btn" href="https://apps.apple.com/app/id1234793120">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.96.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-        Download
-      </a>
-    </nav>
-  </header>
+<header class="nav">
+  <div class="nav-brand">
+    <img src="assets/app_logo_5000words.jpg" alt="#5000words icon">
+    <span>#5000words</span>
+  </div>
+  <nav>
+    <a href="/contact-me/">Contact</a>
+    <a class="pill" href="https://apps.apple.com/es/app/id6478545812">Download free</a>
+  </nav>
+</header>
 
-  <main>
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow rise">The language app that listens</p>
-          <h1 class="rise d1">Learn the 5,000 words that matter — <em>out loud.</em></h1>
-          <p class="lede rise d2">Flashcards test your thumbs. <strong>#5000words</strong> prompts you with the most frequent words in your new language and listens while you say them — speech recognition runs entirely on your iPhone — until every word comes out without thinking.</p>
-          <div class="cta-row rise d3">
-            <a class="appstore-badge" href="https://apps.apple.com/app/id1234793120">
-              <img src="/assets/appstore.png" alt="Download on the App Store">
-            </a>
-            <span class="cta-note">Free download · iOS · works offline</span>
-          </div>
-        </div>
-        <div style="position: relative;">
-          <div class="freq-ghost" aria-hidden="true">
-            <div><b>#0001</b> el</div><div><b>#0002</b> de</div><div><b>#0003</b> que</div>
-            <div><b>#0004</b> y</div><div><b>#0005</b> en</div><div><b>#0006</b> un</div>
-            <div><b>#0007</b> ser</div><div><b>#0008</b> se</div><div><b>#0009</b> no</div>
-            <div><b>#0010</b> haber</div><div><b>#0011</b> por</div><div><b>#0012</b> con</div>
-          </div>
-          <div class="demo rise d2" id="demo" aria-hidden="true">
-            <div class="demo-top">
-              <span>Lesson · word <span id="demo-count">3</span>/10</span>
-              <span class="rank-chip">№ <span id="demo-rank">412</span></span>
-            </div>
-            <div class="demo-word" id="demo-word">aprender</div>
-            <div class="demo-gloss" id="demo-gloss">to learn</div>
-            <div class="demo-wave" id="demo-wave"></div>
-            <div class="demo-status">
-              <span class="dot"></span>
-              <span id="demo-status-text">Listening&hellip;</span>
-            </div>
-          </div>
-        </div>
+<section class="hero">
+  <h1><span class="accent">Speak.</span> Listen. Learn.</h1>
+  <p class="sub">Learn 5000 words by saying them out loud — flashcards you speak, not swipe.</p>
+  <div class="store">
+    <a href="https://apps.apple.com/es/app/id6478545812"><img src="assets/appstore.png" alt="Download on the App Store"></a>
+  </div>
+  <p class="fine">English &amp; Spanish · Free · 100% offline</p>
+</section>
+
+<section class="stage" aria-hidden="true">
+  <div class="side up-next">
+    <p class="kicker">UP NEXT · #80</p>
+    <p class="word">tomar</p>
+  </div>
+  <div class="main-card">
+    <p class="kicker">SAY IT OUT LOUD</p>
+    <p class="word">hablar</p>
+    <div class="listen">
+      <div class="waveform">
+        <div style="height:10px"></div>
+        <div style="height:18px"></div>
+        <div style="height:12px"></div>
+        <div style="height:22px"></div>
+        <div style="height:14px"></div>
+        <div style="height:19px"></div>
+        <div style="height:9px"></div>
       </div>
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track" id="marquee-track">
-          <span>the<i>#1</i></span><span class="es">de<i>#2</i></span><span>of<i>#2</i></span><span class="es">que<i>#3</i></span><span>and<i>#3</i></span><span class="es">el<i>#5</i></span><span>to<i>#4</i></span><span class="es">en<i>#6</i></span><span>have<i>#9</i></span><span class="es">ser<i>#7</i></span><span>that<i>#9</i></span><span class="es">no<i>#9</i></span><span>with<i>#16</i></span><span class="es">para<i>#16</i></span><span>time<i>#55</i></span><span class="es">tiempo<i>#75</i></span><span>world<i>#123</i></span><span class="es">mundo<i>#150</i></span><span>always<i>#183</i></span><span class="es">siempre<i>#111</i></span><span>learn<i>#511</i></span><span class="es">aprender<i>#412</i></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== WHY FREQUENCY ========== -->
-    <section id="why">
-      <div class="wrap">
-        <p class="kicker">Why 5,000 words?</p>
-        <h2>A handful of words does <em>most of the talking.</em></h2>
-        <p class="section-lede">Word frequency is brutally lopsided. You don't need a dictionary — you need the short list that actually shows up in conversation, learned in the order you'll meet it.</p>
-        <div class="stats">
-          <div class="stat">
-            <div class="num">500</div>
-            <p>The <strong>500 most common words</strong> already make up about half of everyday speech. That's your first few weeks.</p>
-          </div>
-          <div class="stat">
-            <div class="num">5,000</div>
-            <p>At 5,000 words you understand <strong>most of what you'll ever hear</strong> — the app's entire vocabulary, ranked by real-world frequency.</p>
-          </div>
-          <div class="stat">
-            <div class="num">0<i>&nbsp;servers</i></div>
-            <p>Words are checked by a speech model <strong>running on your iPhone</strong>. No account, no internet, no one listening in.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== HOW IT WORKS ========== -->
-    <section id="how">
-      <div class="wrap">
-        <p class="kicker">How it works</p>
-        <h2>Three steps. One of them is <em>your voice.</em></h2>
-        <div class="steps">
-          <div class="step">
-            <span class="n">01</span>
-            <h3>Find your level</h3>
-            <p>A quick placement test discovers what you already know, so you start exactly where your vocabulary ends — not at "hello" again.</p>
-          </div>
-          <div class="step">
-            <span class="n">02</span>
-            <h3>Say the word</h3>
-            <p>The app shows a word and opens the mic. Say it. On-device speech recognition confirms it — no typing, no multiple choice, no swiping cards into the void.</p>
-          </div>
-          <div class="step">
-            <span class="n">03</span>
-            <h3>Keep it forever</h3>
-            <p>Spaced repetition brings each word back right before you'd forget it. A few minutes a day compounds into a working vocabulary.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== FEATURES ========== -->
-    <section id="features">
-      <div class="wrap">
-        <p class="kicker">Built for actually learning</p>
-        <h2>Everything you need. <em>Nothing you don't.</em></h2>
-        <div class="features">
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></svg></div>
-            <h3>Speak, don't swipe</h3>
-            <p>Every word is an out-loud rep. If you can say it on the spot, you own it — recognition beats recall every time.</p>
-          </div>
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <h3>Ranked by frequency</h3>
-            <p>Words arrive in the order the language actually uses them, so every session raises the share of speech you understand.</p>
-          </div>
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
-            <h3>Spaced repetition</h3>
-            <p>Reviews land at the moment you're about to forget. The schedule is the app's problem, not yours.</p>
-          </div>
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20M6.7 6.7A7 7 0 0 0 5 17h11M9.5 4.6A7 7 0 0 1 19 11a4 4 0 0 1 2.6 6.6"/></svg></div>
-            <h3>100% offline</h3>
-            <p>The speech model lives on your phone. Planes, metros, mountaintops, dead zones — all study time.</p>
-          </div>
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 4 12.7c-.6.5-1 1.2-1 2V17H9v-.3c0-.8-.4-1.5-1-2A7 7 0 0 1 12 2z"/></svg></div>
-            <h3>Hints, not answers</h3>
-            <p>Stuck on a word? Reveal it letter by letter. You keep momentum without the answer being handed to you.</p>
-          </div>
-          <div class="feature">
-            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg></div>
-            <h3>Dark. Quiet. Focused.</h3>
-            <p>No ads, no mascot guilt-tripping you, no confetti economy. Just you, the mic, and the next word.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PRIVACY ========== -->
-    <section id="privacy">
-      <div class="wrap">
-        <div class="privacy-band">
-          <p class="kicker">Private by architecture</p>
-          <h2>Your voice never leaves your phone.</h2>
-          <p>Speech recognition runs entirely on-device. Recordings are transcribed in place and immediately discarded — nothing is uploaded, stored, or used for training. Not even we can hear you practice.</p>
-          <p class="fine">The boring details are in the <a href="/privacypolicy/">privacy policy</a>. It's short, because there's not much to collect.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== LANGUAGES ========== -->
-    <section id="languages">
-      <div class="wrap">
-        <p class="kicker">Languages</p>
-        <h2>Pick a language. <em>Start talking.</em></h2>
-        <div class="langs">
-          <div class="lang">
-            <h3>English <span>learn it from Spanish</span></h3>
-            <span class="flag">🇺🇸</span>
-          </div>
-          <div class="lang">
-            <h3>Spanish <span>learn it from English</span></h3>
-            <span class="flag">🇪🇸</span>
-          </div>
-        </div>
-        <p class="langs-note">// more languages in the works</p>
-      </div>
-    </section>
-
-    <!-- ========== FINALE ========== -->
-    <section class="finale">
-      <div class="wrap">
-        <p class="kicker">Free to download</p>
-        <h2>Your next language is waiting to <em>hear from you.</em></h2>
-        <div class="cta-row">
-          <a class="appstore-badge" href="https://apps.apple.com/app/id1234793120">
-            <img src="/assets/appstore.png" alt="Download on the App Store">
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site">
-    <div class="wrap foot">
-      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
-      <a href="/privacypolicy/">Privacy</a>
-      <a href="/contact-me/">Support</a>
-      <a href="mailto:5000wordsapp@gmail.com">5000wordsapp@gmail.com</a>
-      <span class="copyright">© <span id="year">2026</span> Álvaro Jiménez · Made with too many flashcards left behind</span>
+      <span class="accepted">✓ to speak</span>
     </div>
-  </footer>
+  </div>
+  <div class="side streak">
+    <p class="count">🔥 7</p>
+    <p class="label">DAY STREAK</p>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<section class="section" data-reveal>
+  <div class="section-head">
+    <p class="kicker-line">WHY FREQUENCY ORDER</p>
+    <h2>A few words do most of the talking.</h2>
+    <p class="lede">Language is astonishingly top-heavy. #5000words focuses on the most frequent words first, so every session gives you the biggest possible piece of tomorrow's conversations.</p>
+  </div>
+  <div class="chart-card">
+    <div class="bars" aria-hidden="true">
+      <div style="height:100%;background:linear-gradient(180deg,#ff7c48,#f2502c)"></div>
+      <div style="height:62%;background:linear-gradient(180deg,#ff7c48,#f2502c)"></div>
+      <div style="height:44%;background:linear-gradient(180deg,#ff7c48,#f2502c)"></div>
+      <div style="height:34%;background:linear-gradient(180deg,#ff9a6e,#f4633f)"></div>
+      <div style="height:27%;background:linear-gradient(180deg,#ff9a6e,#f4633f)"></div>
+      <div style="height:22%;background:#f9b797"></div>
+      <div style="height:18%;background:#f9b797"></div>
+      <div style="height:15%;background:#f9c9b0"></div>
+      <div style="height:12%;background:#f9c9b0"></div>
+      <div style="height:10%;background:#f5d9c8"></div>
+      <div style="height:9%;background:#f5d9c8"></div>
+      <div style="height:8%;background:#f0e2d6"></div>
+      <div style="height:7%;background:#f0e2d6"></div>
+      <div style="height:6%;background:#f0e6dd"></div>
+      <div style="height:5%;background:#f0e6dd"></div>
+      <div style="height:5%;background:#efe8e1"></div>
+      <div style="height:4%;background:#efe8e1"></div>
+      <div style="height:4%;background:#eeeae5"></div>
+      <div style="height:3%;background:#eeeae5"></div>
+      <div style="height:3%;background:#ece9e6"></div>
+    </div>
+    <div class="chart-axis">
+      <span>word #1</span><span class="accent"><span class="sm-hide">#500 → 51% of speech</span><span class="sm-only">#500 → 51%</span></span><span class="sm-hide">#2000 → most speech</span><span><span class="sm-hide">word #5000 → fluency</span><span class="sm-only">#5000 → fluency</span></span>
+    </div>
+  </div>
+</section>
 
-    // Marquee: duplicate track for a seamless loop
-    const track = document.getElementById('marquee-track');
-    track.innerHTML += track.innerHTML;
+<section id="the-list" class="list-section" data-reveal>
+  <div class="copy">
+    <p class="kicker-line">THE LIST</p>
+    <h2>5,000 words, ranked by real life.</h2>
+    <p class="body">Every word has its place in the ranking — from <em>que</em> at #1 to the long tail. You always know where you stand and what a word is worth.</p>
+    <div class="chips">
+      <span class="chip">🇪🇸 Spanish</span>
+      <span class="chip">🇺🇸 English</span>
+      <span class="chip soon">more soon</span>
+    </div>
+  </div>
+  <div class="list-card">
+    <div class="list-card-head">
+      <p class="kicker">THE LIST · SPANISH</p>
+      <p class="count">5,000 words</p>
+    </div>
+    <div class="ladder">
+      <div class="rung"><span class="rank">#1</span><span class="word">que</span><div class="bar" style="width:100%"></div></div>
+      <div class="rung"><span class="rank">#2</span><span class="word">de</span><div class="bar" style="width:88%"></div></div>
+      <div class="rung"><span class="rank">#3</span><span class="word">no</span><div class="bar" style="width:78%"></div></div>
+      <div class="rung"><span class="rank">#24</span><span class="word">su</span><div class="done"><div class="bar" style="width:46%"></div><span class="tick">✓</span></div></div>
+      <div class="ellipsis">···</div>
+      <div class="rung here"><span class="rank">#97</span><span class="word">hablar</span><span class="you">← you are here</span></div>
+      <div class="rung"><span class="rank">#98</span><span class="word">tomar</span><div class="bar dim" style="width:24%"></div></div>
+      <div class="rung"><span class="rank">#99</span><span class="word">vivir</span><div class="bar dim" style="width:23%"></div></div>
+      <div class="ellipsis">···</div>
+      <div class="rung tail"><span class="rank">#5000</span><span class="word">anhelar</span><div class="bar dim" style="width:4%"></div></div>
+    </div>
+  </div>
+</section>
 
-    // Hero demo: prompt -> listen -> accept -> next word
-    const WORDS = [
-      { w: 'aprender', g: 'to learn',      r: 412 },
-      { w: 'through',  g: 'a través de',   r: 96  },
-      { w: 'siempre',  g: 'always',        r: 111 },
-      { w: 'world',    g: 'mundo',         r: 123 },
-      { w: 'trabajo',  g: 'work',          r: 178 },
-      { w: 'enough',   g: 'suficiente',    r: 289 },
-    ];
-    const demo = document.getElementById('demo');
-    const wave = document.getElementById('demo-wave');
-    const el = {
-      word: document.getElementById('demo-word'),
-      gloss: document.getElementById('demo-gloss'),
-      rank: document.getElementById('demo-rank'),
-      count: document.getElementById('demo-count'),
-      status: document.getElementById('demo-status-text'),
-    };
+<section id="how-it-works" class="steps-section" data-reveal>
+  <div class="steps-connector" aria-hidden="true"></div>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Take the level test</h3>
+      <p>A quick test assigns your level — lessons then pick the right words around it.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Speak each word</h3>
+      <p>On-device speech recognition listens; hints reveal letters when stuck.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Review right on time</h3>
+      <p>Spaced repetition resurfaces words just before you'd forget — keep the 🔥 streak alive.</p>
+    </div>
+  </div>
+</section>
 
-    // Build waveform bars with randomized amplitude/phase
-    for (let i = 0; i < 26; i++) {
-      const bar = document.createElement('span');
-      const center = 1 - Math.abs(i - 13) / 15;
-      bar.style.setProperty('--amp', Math.round(25 + center * 60 + Math.random() * 15) + '%');
-      bar.style.animationDelay = (Math.random() * -0.9).toFixed(2) + 's';
-      wave.appendChild(bar);
-    }
+<section class="cta" data-reveal>
+  <h2>Your first 500 words are waiting.</h2>
+  <div class="store">
+    <a href="https://apps.apple.com/es/app/id6478545812"><img src="assets/appstore.png" alt="Download on the App Store"></a>
+  </div>
+</section>
 
-    let idx = 0, count = 3;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+<footer class="footer">
+  <span>Made with ❤️ by Álvaro Jiménez</span>
+  <div class="links">
+    <a href="https://twitter.com/5000words_app">@5000words_app</a>
+    <a href="/contact-me/">Contact</a>
+    <a href="/privacypolicy/">Privacy Policy</a>
+  </div>
+</footer>
 
-    function cycle() {
-      const item = WORDS[idx % WORDS.length];
-      demo.classList.remove('accepted');
-      demo.classList.add('listening');
-      el.word.textContent = item.w;
-      el.gloss.textContent = item.g;
-      el.rank.textContent = item.r;
-      el.count.textContent = (count % 10) + 1;
-      el.status.innerHTML = 'Listening&hellip;';
+<script>
+(function(){
+  var sections = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window)) {
+    sections.forEach(function(s){ s.classList.add('in-view'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.25});
+  sections.forEach(function(s){ io.observe(s); });
+})();
+</script>
 
-      setTimeout(() => {
-        el.status.innerHTML = 'Heard: <span class="demo-heard">&ldquo;' + item.w + '&rdquo;</span>';
-      }, 1700);
-      setTimeout(() => {
-        demo.classList.remove('listening');
-        demo.classList.add('accepted');
-        el.status.innerHTML = item.w + ' &#10003;';
-      }, 2400);
-      setTimeout(() => { idx++; count++; cycle(); }, 3900);
-    }
-    if (!reduced) { cycle(); }
-    else {
-      demo.classList.add('accepted');
-      el.status.innerHTML = 'aprender &#10003;';
-    }
-  </script>
 </body>
 </html>

@@ -1,65 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Support — #5000words</title>
-  <meta name="description" content="Get help with the #5000words app. Direct line to the developer.">
-  <meta name="apple-itunes-app" content="app-id=1234793120">
-  <link rel="icon" href="/assets/app_logo_5000words.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=Fragment+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — #5000words</title>
+<meta name="description" content="Get support for #5000words, the iOS app that teaches you the 5000 most common words by speaking them out loud.">
+<link rel="icon" href="/assets/app_logo_5000words.jpg">
+<link rel="apple-touch-icon" href="/assets/app_logo_5000words.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf5ee;
+  --ink:#2b2723;
+  --muted:#8a827a;
+  --faint:#b3aca4;
+  --accent:#f04f24;
+  --accent-dark:#d84318;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif;display:flex;flex-direction:column}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-dark)}
+
+@keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 52px;max-width:1200px;margin:0 auto;width:100%}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-brand img{width:36px;height:36px;border-radius:10px}
+.nav-brand span{font-weight:700;font-size:18px;color:var(--accent)}
+.nav nav{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:600}
+.nav nav a.current{color:var(--accent)}
+.nav .pill,.nav .pill:hover{color:#fff;background:var(--accent);padding:10px 22px;border-radius:999px}
+.nav .pill:hover{background:var(--accent-dark)}
+
+.content{max-width:720px;margin:0 auto;padding:64px 52px 104px;width:100%;flex:1;animation:fade-up .7s ease-out both}
+.kicker-line{margin:0;font-size:12px;font-weight:600;letter-spacing:0.18em;color:var(--accent)}
+h1{margin:14px 0 0;font-size:44px;font-weight:700;letter-spacing:-0.02em}
+h2{margin:48px 0 0;font-size:24px;font-weight:700}
+.content p{margin:14px 0 0;font-size:16px;line-height:1.7;color:var(--muted);text-wrap:pretty}
+.content p.intro{margin:22px 0 0;font-size:17px}
+.content strong{color:var(--ink)}
+
+.support-card{margin:36px 0 0;background:linear-gradient(135deg,#f2502c,#ff7c48);border-radius:24px;padding:36px 40px;color:#fff}
+.support-card .kicker{margin:0;font-size:14px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.8)}
+.support-card a{display:inline-block;margin-top:12px;font-size:26px;font-weight:700;color:#fff;overflow-wrap:anywhere}
+.support-card a:hover{color:rgba(255,255,255,0.85)}
+
+.checklist{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.checklist div{display:flex;gap:14px;align-items:baseline;background:#fff;border-radius:14px;padding:14px 20px;box-shadow:0 6px 18px rgba(120,30,0,0.06)}
+.checklist .num{font-size:14px;font-weight:700;color:var(--accent)}
+.checklist .item{font-size:15px;color:var(--ink)}
+
+.footer{display:flex;align-items:center;justify-content:space-between;padding:26px 52px;border-top:1px solid rgba(43,39,35,0.08);font-size:13px;color:var(--muted);max-width:1200px;margin:0 auto;width:100%;gap:16px;flex-wrap:wrap}
+.footer .links{display:flex;gap:24px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important}
+}
+
+@media (max-width: 720px){
+  .nav{padding:16px 24px}
+  .nav nav{gap:18px}
+  .content{padding:44px 24px 72px}
+  h1{font-size:34px}
+  .support-card{padding:28px 26px}
+  .support-card a{font-size:20px}
+  .footer{padding:22px 24px;justify-content:center;text-align:center}
+}
+</style>
 </head>
 <body>
-  <div class="atmosphere"></div>
 
-  <header class="site">
-    <nav class="nav wrap">
-      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
-      <a class="link" href="/#how">How it works</a>
-      <a class="link" href="/privacypolicy/">Privacy</a>
-      <a class="btn" href="https://apps.apple.com/app/id1234793120">Download</a>
-    </nav>
-  </header>
+<header class="nav">
+  <a class="nav-brand" href="/">
+    <img src="/assets/app_logo_5000words.jpg" alt="#5000words icon">
+    <span>#5000words</span>
+  </a>
+  <nav>
+    <a class="current" href="/contact-me/">Contact</a>
+    <a class="pill" href="https://apps.apple.com/es/app/id6478545812">Download free</a>
+  </nav>
+</header>
 
-  <main class="page">
-    <h1>Support</h1>
-    <p class="updated">Answered by the developer, not a bot</p>
+<main class="content">
+  <p class="kicker-line">CONTACT</p>
+  <h1>Contact me</h1>
+  <p class="intro">Thank you for using #5000words! I'm here to help you with any questions or issues you might have.</p>
 
-    <p>#5000words is built by one person — me, Álvaro. That means no ticket queue and no canned replies: your email lands directly in my inbox, and I read every one.</p>
+  <div class="support-card">
+    <p class="kicker">THE FASTEST WAY TO GET SUPPORT</p>
+    <a href="mailto:5000wordsapp@gmail.com">5000wordsapp@gmail.com</a>
+  </div>
 
-    <div class="card">
-      <p><strong>Email me at</strong><br>
-      <a href="mailto:5000wordsapp@gmail.com" style="font-size: 22px; font-family: var(--display);">5000wordsapp@gmail.com</a></p>
-    </div>
+  <h2>About the app</h2>
+  <p>#5000words is a brand new app, and I'm actively working on improving it and releasing updates frequently. I'm focusing on speech recognition at the moment, as well as improving the overall learning experience.</p>
+  <p><strong>I would absolutely love to hear from you!</strong> Your feedback, suggestions, and experiences are invaluable in helping me make the app better. Whether you have ideas for improvements, encountered any issues, or just want to share your thoughts, please don't hesitate to reach out.</p>
 
-    <h2>Help me help you</h2>
-    <p>If you're reporting a problem, including these makes the fix much faster:</p>
-    <ol>
-      <li>Your iPhone model and iOS version</li>
-      <li>The app version (shown in Settings inside the app)</li>
-      <li>What happened — and what you expected to happen</li>
-      <li>Steps to reproduce it, if you can</li>
-      <li>A screenshot, if it's something visual</li>
-    </ol>
+  <h2>What to include in your support email</h2>
+  <div class="checklist">
+    <div><span class="num">1</span><span class="item">Your iOS device model</span></div>
+    <div><span class="num">2</span><span class="item">iOS version</span></div>
+    <div><span class="num">3</span><span class="item">App version</span></div>
+    <div><span class="num">4</span><span class="item">Detailed description of your issue</span></div>
+    <div><span class="num">5</span><span class="item">Steps to reproduce the problem (if applicable)</span></div>
+    <div><span class="num">6</span><span class="item">Screenshots (if relevant)</span></div>
+  </div>
 
-    <h2>Feature ideas</h2>
-    <p>Requests genuinely shape the roadmap — several features in the app exist because someone emailed about them. If something would make your learning better, tell me.</p>
+  <h2>App Store</h2>
+  <p>If you're enjoying #5000words, please consider <a href="https://apps.apple.com/es/app/id6478545812">leaving a review on the App Store</a>.</p>
+</main>
 
-    <h2>Enjoying the app?</h2>
-    <p>A review on the <a href="https://apps.apple.com/app/id1234793120">App Store</a> is the single most helpful thing you can do for a small independent app. Thank you.</p>
-  </main>
+<footer class="footer">
+  <span>Made with ❤️ by Álvaro Jiménez</span>
+  <div class="links">
+    <a href="https://twitter.com/5000words_app">@5000words_app</a>
+    <a href="/contact-me/">Contact</a>
+    <a href="/privacypolicy/">Privacy Policy</a>
+  </div>
+</footer>
 
-  <footer class="site">
-    <div class="wrap foot">
-      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
-      <a href="/privacypolicy/">Privacy</a>
-      <a href="/contact-me/">Support</a>
-      <a href="mailto:5000wordsapp@gmail.com">5000wordsapp@gmail.com</a>
-      <span class="copyright">© 2026 Álvaro Jiménez</span>
-    </div>
-  </footer>
 </body>
 </html>
