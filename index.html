@@ -1,3 +1,288 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#5000words — Learn a language out loud</title>
+  <meta name="description" content="Learn the 5,000 most common words of a language by saying them out loud. On-device speech recognition listens and checks you. 100% offline, 100% private. For iPhone.">
+  <meta name="apple-itunes-app" content="app-id=1234793120">
+  <link rel="icon" href="/assets/app_logo_5000words.jpg">
+  <link rel="apple-touch-icon" href="/assets/app_logo_5000words.jpg">
+  <meta property="og:title" content="#5000words — Learn a language out loud">
+  <meta property="og:description" content="The 5,000 most common words cover most of what you'll ever hear. Learn to say every one — your iPhone listens and checks you, entirely on-device.">
+  <meta property="og:image" content="https://5000words.app/assets/app_logo_5000words.jpg">
+  <meta property="og:url" content="https://5000words.app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="atmosphere"></div>
+
+  <header class="site">
+    <nav class="nav wrap">
+      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#privacy">Privacy</a>
+      <a class="link" href="/contact-me/">Support</a>
+      <a class="btn" href="https://apps.apple.com/app/id1234793120">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.96.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        Download
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow rise">The language app that listens</p>
+          <h1 class="rise d1">Learn the 5,000 words that matter — <em>out loud.</em></h1>
+          <p class="lede rise d2">Flashcards test your thumbs. <strong>#5000words</strong> prompts you with the most frequent words in your new language and listens while you say them — speech recognition runs entirely on your iPhone — until every word comes out without thinking.</p>
+          <div class="cta-row rise d3">
+            <a class="appstore-badge" href="https://apps.apple.com/app/id1234793120">
+              <img src="/assets/appstore.png" alt="Download on the App Store">
+            </a>
+            <span class="cta-note">Free download · iOS · works offline</span>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div class="freq-ghost" aria-hidden="true">
+            <div><b>#0001</b> el</div><div><b>#0002</b> de</div><div><b>#0003</b> que</div>
+            <div><b>#0004</b> y</div><div><b>#0005</b> en</div><div><b>#0006</b> un</div>
+            <div><b>#0007</b> ser</div><div><b>#0008</b> se</div><div><b>#0009</b> no</div>
+            <div><b>#0010</b> haber</div><div><b>#0011</b> por</div><div><b>#0012</b> con</div>
+          </div>
+          <div class="demo rise d2" id="demo" aria-hidden="true">
+            <div class="demo-top">
+              <span>Lesson · word <span id="demo-count">3</span>/10</span>
+              <span class="rank-chip">№ <span id="demo-rank">412</span></span>
+            </div>
+            <div class="demo-word" id="demo-word">aprender</div>
+            <div class="demo-gloss" id="demo-gloss">to learn</div>
+            <div class="demo-wave" id="demo-wave"></div>
+            <div class="demo-status">
+              <span class="dot"></span>
+              <span id="demo-status-text">Listening&hellip;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+          <span>the<i>#1</i></span><span class="es">de<i>#2</i></span><span>of<i>#2</i></span><span class="es">que<i>#3</i></span><span>and<i>#3</i></span><span class="es">el<i>#5</i></span><span>to<i>#4</i></span><span class="es">en<i>#6</i></span><span>have<i>#9</i></span><span class="es">ser<i>#7</i></span><span>that<i>#9</i></span><span class="es">no<i>#9</i></span><span>with<i>#16</i></span><span class="es">para<i>#16</i></span><span>time<i>#55</i></span><span class="es">tiempo<i>#75</i></span><span>world<i>#123</i></span><span class="es">mundo<i>#150</i></span><span>always<i>#183</i></span><span class="es">siempre<i>#111</i></span><span>learn<i>#511</i></span><span class="es">aprender<i>#412</i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY FREQUENCY ========== -->
+    <section id="why">
+      <div class="wrap">
+        <p class="kicker">Why 5,000 words?</p>
+        <h2>A handful of words does <em>most of the talking.</em></h2>
+        <p class="section-lede">Word frequency is brutally lopsided. You don't need a dictionary — you need the short list that actually shows up in conversation, learned in the order you'll meet it.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="num">500</div>
+            <p>The <strong>500 most common words</strong> already make up about half of everyday speech. That's your first few weeks.</p>
+          </div>
+          <div class="stat">
+            <div class="num">5,000</div>
+            <p>At 5,000 words you understand <strong>most of what you'll ever hear</strong> — the app's entire vocabulary, ranked by real-world frequency.</p>
+          </div>
+          <div class="stat">
+            <div class="num">0<i>&nbsp;servers</i></div>
+            <p>Words are checked by a speech model <strong>running on your iPhone</strong>. No account, no internet, no one listening in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section id="how">
+      <div class="wrap">
+        <p class="kicker">How it works</p>
+        <h2>Three steps. One of them is <em>your voice.</em></h2>
+        <div class="steps">
+          <div class="step">
+            <span class="n">01</span>
+            <h3>Find your level</h3>
+            <p>A quick placement test discovers what you already know, so you start exactly where your vocabulary ends — not at "hello" again.</p>
+          </div>
+          <div class="step">
+            <span class="n">02</span>
+            <h3>Say the word</h3>
+            <p>The app shows a word and opens the mic. Say it. On-device speech recognition confirms it — no typing, no multiple choice, no swiping cards into the void.</p>
+          </div>
+          <div class="step">
+            <span class="n">03</span>
+            <h3>Keep it forever</h3>
+            <p>Spaced repetition brings each word back right before you'd forget it. A few minutes a day compounds into a working vocabulary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section id="features">
+      <div class="wrap">
+        <p class="kicker">Built for actually learning</p>
+        <h2>Everything you need. <em>Nothing you don't.</em></h2>
+        <div class="features">
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></svg></div>
+            <h3>Speak, don't swipe</h3>
+            <p>Every word is an out-loud rep. If you can say it on the spot, you own it — recognition beats recall every time.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3>Ranked by frequency</h3>
+            <p>Words arrive in the order the language actually uses them, so every session raises the share of speech you understand.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+            <h3>Spaced repetition</h3>
+            <p>Reviews land at the moment you're about to forget. The schedule is the app's problem, not yours.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20M6.7 6.7A7 7 0 0 0 5 17h11M9.5 4.6A7 7 0 0 1 19 11a4 4 0 0 1 2.6 6.6"/></svg></div>
+            <h3>100% offline</h3>
+            <p>The speech model lives on your phone. Planes, metros, mountaintops, dead zones — all study time.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 4 12.7c-.6.5-1 1.2-1 2V17H9v-.3c0-.8-.4-1.5-1-2A7 7 0 0 1 12 2z"/></svg></div>
+            <h3>Hints, not answers</h3>
+            <p>Stuck on a word? Reveal it letter by letter. You keep momentum without the answer being handed to you.</p>
+          </div>
+          <div class="feature">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg></div>
+            <h3>Dark. Quiet. Focused.</h3>
+            <p>No ads, no mascot guilt-tripping you, no confetti economy. Just you, the mic, and the next word.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRIVACY ========== -->
+    <section id="privacy">
+      <div class="wrap">
+        <div class="privacy-band">
+          <p class="kicker">Private by architecture</p>
+          <h2>Your voice never leaves your phone.</h2>
+          <p>Speech recognition runs entirely on-device. Recordings are transcribed in place and immediately discarded — nothing is uploaded, stored, or used for training. Not even we can hear you practice.</p>
+          <p class="fine">The boring details are in the <a href="/privacypolicy/">privacy policy</a>. It's short, because there's not much to collect.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LANGUAGES ========== -->
+    <section id="languages">
+      <div class="wrap">
+        <p class="kicker">Languages</p>
+        <h2>Pick a language. <em>Start talking.</em></h2>
+        <div class="langs">
+          <div class="lang">
+            <h3>English <span>learn it from Spanish</span></h3>
+            <span class="flag">🇺🇸</span>
+          </div>
+          <div class="lang">
+            <h3>Spanish <span>learn it from English</span></h3>
+            <span class="flag">🇪🇸</span>
+          </div>
+        </div>
+        <p class="langs-note">// more languages in the works</p>
+      </div>
+    </section>
+
+    <!-- ========== FINALE ========== -->
+    <section class="finale">
+      <div class="wrap">
+        <p class="kicker">Free to download</p>
+        <h2>Your next language is waiting to <em>hear from you.</em></h2>
+        <div class="cta-row">
+          <a class="appstore-badge" href="https://apps.apple.com/app/id1234793120">
+            <img src="/assets/appstore.png" alt="Download on the App Store">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot">
+      <a class="brand" href="/"><span class="hash">#</span>5000words</a>
+      <a href="/privacypolicy/">Privacy</a>
+      <a href="/contact-me/">Support</a>
+      <a href="mailto:5000wordsapp@gmail.com">5000wordsapp@gmail.com</a>
+      <span class="copyright">© <span id="year">2026</span> Álvaro Jiménez · Made with too many flashcards left behind</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Marquee: duplicate track for a seamless loop
+    const track = document.getElementById('marquee-track');
+    track.innerHTML += track.innerHTML;
+
+    // Hero demo: prompt -> listen -> accept -> next word
+    const WORDS = [
+      { w: 'aprender', g: 'to learn',      r: 412 },
+      { w: 'through',  g: 'a través de',   r: 96  },
+      { w: 'siempre',  g: 'always',        r: 111 },
+      { w: 'world',    g: 'mundo',         r: 123 },
+      { w: 'trabajo',  g: 'work',          r: 178 },
+      { w: 'enough',   g: 'suficiente',    r: 289 },
+    ];
+    const demo = document.getElementById('demo');
+    const wave = document.getElementById('demo-wave');
+    const el = {
+      word: document.getElementById('demo-word'),
+      gloss: document.getElementById('demo-gloss'),
+      rank: document.getElementById('demo-rank'),
+      count: document.getElementById('demo-count'),
+      status: document.getElementById('demo-status-text'),
+    };
+
+    // Build waveform bars with randomized amplitude/phase
+    for (let i = 0; i < 26; i++) {
+      const bar = document.createElement('span');
+      const center = 1 - Math.abs(i - 13) / 15;
+      bar.style.setProperty('--amp', Math.round(25 + center * 60 + Math.random() * 15) + '%');
+      bar.style.animationDelay = (Math.random() * -0.9).toFixed(2) + 's';
+      wave.appendChild(bar);
+    }
+
+    let idx = 0, count = 3;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function cycle() {
+      const item = WORDS[idx % WORDS.length];
+      demo.classList.remove('accepted');
+      demo.classList.add('listening');
+      el.word.textContent = item.w;
+      el.gloss.textContent = item.g;
+      el.rank.textContent = item.r;
+      el.count.textContent = (count % 10) + 1;
+      el.status.innerHTML = 'Listening&hellip;';
+
+      setTimeout(() => {
+        el.status.innerHTML = 'Heard: <span class="demo-heard">&ldquo;' + item.w + '&rdquo;</span>';
+      }, 1700);
+      setTimeout(() => {
+        demo.classList.remove('listening');
+        demo.classList.add('accepted');
+        el.status.innerHTML = item.w + ' &#10003;';
+      }, 2400);
+      setTimeout(() => { idx++; count++; cycle(); }, 3900);
+    }
+    if (!reduced) { cycle(); }
+    else {
+      demo.classList.add('accepted');
+      el.status.innerHTML = 'aprender &#10003;';
+    }
+  </script>
+</body>
+</html>
